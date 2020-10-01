@@ -2,9 +2,9 @@ Good afternoon Captain,
 
 We have an important mission for you. Our department is currently looking to understand how much aliens know about human everyday life.
 Researchers found out that aliens of different colours are interested in different topics:
-1) RED:
-2) GREEN:
-3) BLUE:
+1) RED: Food scinarios
+2) GREEN: Family scinarios
+3) BLUE: Hobbies
 Your task is to give a little context related to the topic, ask the alien a question and give him/her three possible answers. Remember, we aim to study their understanding of our everyday life, hence questions should be challenging and also a bit tricky, so that we can test their intellectual abilities. Moreover, confusing or counter-intuitive options could help us study their reasoning about social situations. For example, if you met a green alien, interested in human thinking, a good example of question and answers would be:
 
 Context: Cameron made perfect grades and made the principals list because of it.
