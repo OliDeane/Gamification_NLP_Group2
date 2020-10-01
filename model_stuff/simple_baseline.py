@@ -1,11 +1,12 @@
 import argparse
 import json
 import os
+from joblib import dump, load
 from typing import List
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 
@@ -49,6 +50,9 @@ def get_embeddings(embs_model, train_records):
             print(i)
 
     return cq_embs, A_embs, B_embs, C_embs, train_labels
+
+
+# def game_loop_test():
 
 
 def main(train_file, input_file, output_file):
@@ -97,10 +101,9 @@ def main(train_file, input_file, output_file):
     print("Completed loading data and embeddings.")
 
     # train a classifier
-    classifier = RandomForestRegressor(n_estimators=1000, n_jobs=-1).fit(
-        joint_embs, joint_labels
-    )
+    classifier = LogisticRegression(n_jobs=-1).fit(joint_embs, joint_labels)
 
+    dump(classifier, "classifier.joblib")
     print("Completed training.")
 
     # Read the records from the test set.
